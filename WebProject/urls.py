@@ -22,7 +22,6 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path( '', views.home_Page,name ="home_page"), 
@@ -36,6 +35,11 @@ urlpatterns = [
     path('loginsuccess/',views.login_success_Page),
     path('logoutsuccess/',views.logout_success_Page),
     #path('bootapp/',views.bootfun),
+
+	# add apis urls
+	path('api', include("api.urls"))
+
+
 
     
 ]
